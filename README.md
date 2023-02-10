@@ -1,1 +1,1 @@
-# react-cripto-app
+# react-crypto-app
