@@ -29,9 +29,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ## `In the future`
 I have a list of task to complete this projet 
 
@@ -42,3 +39,10 @@ I have a list of task to complete this projet
  - [ ] Add loader in home
  - [ ] add possibility to choose the currency
  
+## Help
+
+Any help or advice is welcome thanks
+## License and author
+- [Elvio Moretti](https://github.com/ecali)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
