@@ -36,8 +36,12 @@ You will also see any lint errors in the console.
 I have a list of task to complete this projet 
 
  [ ] Deploy on firebase
+
  [ ] Typing the response by coingecko
+
  [ ] FIX double call for strict mode
+
  [ ] Add loader in home
+
  [ ] add possibility to choose the currency
  
