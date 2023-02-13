@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     callApi(filter);
-  }, []);
+  }, [filter]);
 
   const handleFilter = (flt: number) => {
     if (flt !== filter) {
