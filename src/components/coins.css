@@ -45,6 +45,12 @@ img {
     display: flex;
     align-items: center;
 }
+.red{
+  color: red;
+}
+.green{
+  color: greenyellow;
+}
 
 @media screen and (max-width: 720px) {
   .hide-mobile {
