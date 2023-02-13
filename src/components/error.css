@@ -1,0 +1,40 @@
+.error-container {
+  border: solid;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem 1rem;
+  padding-bottom: 1rem;
+}
+.error-heading{
+    margin-bottom: 1rem;
+    border-bottom: solid;
+    padding-bottom: 1rem;
+}
+.error-heading svg{
+    font-size: 32px;
+}
+.button-home{
+    width: 50%;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    background: black;
+    color: #FFBF00;
+    cursor: pointer;
+    border: solid 2px #FFBF00;
+}
+.button-home svg{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .button-home{
+        width: 80%;
+    }
+  }
+  
