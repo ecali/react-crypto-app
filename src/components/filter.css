@@ -1,0 +1,36 @@
+
+.filter-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.filter-container p {
+    font-size: 13px;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.filter button{
+    margin: 1rem;
+    padding: 0.2rem 0.5rem;
+    border: solid 2px #CD7F32;
+    border-radius: 10px;
+    width: 60px;
+    cursor: pointer;
+    background: #FFBF00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.selected{
+    border: solid 2px #FFBF00 !important;
+    background: #CD7F32 !important;
+    cursor: unset !important;
+}
+
+.yellow{
+    color: #FFBF00;
+}
