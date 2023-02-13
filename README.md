@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## `In the future`
 I have a list of task to complete this projet 
 
- - [ ] Deploy on firebase
+ - [x] Deploy on firebase
  - [x] Typing the response by coingecko
  - [ ] FIX double call for strict mode
  - [x] Add loader in home
