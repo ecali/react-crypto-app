@@ -4,16 +4,19 @@ import "./coins.css";
 import { Filter } from "./Filter";
 import {Error} from './Error';
 import { MarketsResponse } from "./shared/interfaces";
+import { Loader } from "./Loader";
 
 export const Coins = (props: {
   coins: MarketsResponse[] | undefined;
   filter: number;
+  error: boolean;
   handleFilter: (flt: number) => void;
+  loading: boolean;
   items: number;
 }) => {
   return (
     <div className="container">
-      {props.coins && props.coins.length > 0 ? (
+      {props.coins && props.coins.length > 0 && (
         <div className="">
           <Filter
             filter={props.filter}
@@ -36,8 +39,12 @@ export const Coins = (props: {
             );
           })}
         </div>
-      ) : (
-        <Error home={false}/>
+      ) }
+      {
+        props.error && (<Error home={false} />) 
+      }
+      {props.loading && (
+        <Loader />
       )}
     </div>
   );

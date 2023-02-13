@@ -10,6 +10,8 @@ import { MarketsResponse } from "./components/shared/interfaces";
 function App() {
   const [coins, setCoins] = useState<MarketsResponse[]>();
   const [filter, setFilter] = useState(10);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     callApi(filter);
@@ -27,13 +29,17 @@ function App() {
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=" +
       flt +
       "&page=1&sparkline=false";
+      setLoading(true);
     axios
       .get(url)
       .then((response) => {
         setCoins(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
+        setLoading(false);
+        setError(true);
       });
   };
 
@@ -48,6 +54,8 @@ function App() {
               coins={coins}
               filter={filter}
               handleFilter={handleFilter}
+              loading={loading}
+              error={error}
               items={coins ? coins.length : 0}
             />
           }
