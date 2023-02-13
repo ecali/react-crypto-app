@@ -33,11 +33,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 I have a list of task to complete this projet 
 
  - [ ] Deploy on firebase
- - [ ] Typing the response by coingecko
-
+ - [x] Typing the response by coingecko
  - [ ] FIX double call for strict mode
- - [ ] Add loader in home
- - [ ] add possibility to choose the currency
+ - [x] Add loader in home
+ - [ ] Add possibility to choose the currency
  
 ## Help
 
