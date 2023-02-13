@@ -5,12 +5,11 @@ import { Coins } from "./components/Coins";
 import { Navbar } from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import { Coin } from "./routes/Coin";
-import { Filter } from "./components/Filter";
+import { MarketsResponse } from "./components/shared/interfaces";
 
 function App() {
-  const [coins, setCoins] = useState([]);
+  const [coins, setCoins] = useState<MarketsResponse[]>();
   const [filter, setFilter] = useState(10);
-  
 
   useEffect(() => {
     callApi(filter);
@@ -23,11 +22,11 @@ function App() {
     }
   };
 
-  const callApi = (flt:  number) => {
+  const callApi = (flt: number) => {
     const url =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=" +
-    flt +
-    "&page=1&sparkline=false";
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=" +
+      flt +
+      "&page=1&sparkline=false";
     axios
       .get(url)
       .then((response) => {
@@ -42,7 +41,17 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Coins coins={coins} filter={filter} handleFilter={handleFilter} items={coins.length} />} />
+        <Route
+          path="/"
+          element={
+            <Coins
+              coins={coins}
+              filter={filter}
+              handleFilter={handleFilter}
+              items={coins ? coins.length : 0}
+            />
+          }
+        />
         <Route path="/coin" element={<Coin />}>
           <Route path=":coinId" element={<Coin />} />
         </Route>

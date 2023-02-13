@@ -3,16 +3,17 @@ import { CoinItem } from "./CoinItem";
 import "./coins.css";
 import { Filter } from "./Filter";
 import {Error} from './Error';
+import { MarketsResponse } from "./shared/interfaces";
 
 export const Coins = (props: {
-  coins: any[];
+  coins: MarketsResponse[] | undefined;
   filter: number;
   handleFilter: (flt: number) => void;
   items: number;
 }) => {
   return (
     <div className="container">
-      {props.coins.length > 0 ? (
+      {props.coins && props.coins.length > 0 ? (
         <div className="">
           <Filter
             filter={props.filter}
