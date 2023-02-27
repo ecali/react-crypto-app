@@ -1,7 +1,8 @@
 import './coins.css';
+import {MarketsResponse} from "./shared/interfaces";
 
-export const CoinItem = (props: { coin: any }) => {
-  let className24h = '';
+export const CoinItem = (props: { coin: MarketsResponse }) => {
+  let className24h: string;
   if(props.coin.price_change_percentage_24h < 0){
     className24h = 'red'
   }else{
