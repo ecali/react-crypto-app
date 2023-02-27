@@ -37,7 +37,7 @@ I have a list of task to complete this projet
  - [ ] FIX double call for strict mode
  - [x] Add loader in home
  - [ ] Add possibility to choose the currency
- - [ ] Add search bar
+ - [x] Add search bar
  
 ## Help
 
